@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WDD 131: Dynamic Web Fundamentals - Cathelène Dechesne</title>
+    <meta name="description"
+        content="WDD 131 - Dynamic Web Fundamentals. Cathelène Dechesne. Home Page, About Me, Web Dev Resources.">
+    <meta name="author" content="Cathelène Dechesne">
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lugrasimo&family=Roboto&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <h1>WDD 131 - Dynamic Web Fundamentals - Cathelène Dechesne</h1>
+        <nav>
+            <ul>
+                <li><a href="https://www.linkedin.com/in/cathelène-dechesne-443910256" class="active">LinkedIn</a></li>
+                <li><a href="https://byui.instructure.com/">I-Learn</a></li>
+                <li><a href="https://www.churchofjesuschrist.org/study/scriptures/bofm/2-ne/22?lang=eng">Scripture</a>
+                </li>
+                <li><a href="#">Final Project Folder</a></li> <!-- Placeholder link -->
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="card">
+            <div id="aboutme">
+                <h2>About Me</h2>
+                <p id="intro">Hi, I'm Cathelène. I was born in France and live with my husband in Australia.
+                    I'm a student at BYU-Pathway Worldwide where I'm currently learning about Web and Computer
+                    Programing.
+                    My passions are mainly in art, food, travel and Asian culture. So when I'm not programing, I love to
+                    sing,draw, and plan on my next trip. </p>
+                <img id="profile-pic" src="images/profile.jpg" alt="Profile picture">
+                <a href="https://www.instagram.com/sweet_cheon_sa_art?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
+                    target="_blank">
+                    <h3>My Artist instagram Page</h3>
+                </a>
+                <img id="instapic" src="images/sepia-drawing.jpg" alt="close-up of drawing in sepia">
+                <p id="instagram">This is my artiste page on Instagram where I share some of my artwork with the world!
+                    I mainly do traditional art, but I also love to challenge myself into creating digital art(no AI
+                    art).
+                    Feel free to step into my own creative journey.</p>
+            </div>
+        </section>
+
+        <section class="card">
+            <div id="webdev">
+                <h2>Web Dev Resources</h2>
+                <ul>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Web">MDN Web Docs</a></li>
+                    <li><a href="https://www.w3schools.com/">W3Schools</a></li>
+                    <li><a href="https://www.freecodecamp.org/">freeCodeCamp</a></li>
+                </ul>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; <span id="2024"></span> Cathelène Dechesne. Australia.</p>
+        <p id="lastModified"></p>
+        <script>
+            // Dynamically populate the current year
+            document.getElementById("currentyear").textContent = new Date().getFullYear();
+
+            // Dynamically populate the last modified date
+            document.getElementById("lastModified").textContent = "Last modified: " + document.lastModified;
+        </script>
+    </footer>
+</body>
+
+</html>

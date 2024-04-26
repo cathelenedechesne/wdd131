@@ -1,0 +1,216 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+}
+
+/********************************** main part starts here ***************************************/
+
+main {
+    display: grid;
+    justify-self: center;
+    max-width: 1000px;
+    width: 68%;
+    grid-template-columns: 3fr 3fr 3fr 3fr;
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+
+#aboutme {
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    margin: .5em;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+#aboutme h2 {
+    grid-column: 1 / 4;
+    height: 70px;
+    text-align: center;
+    background: #AEA3B0;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    padding: .5em;
+}
+
+#intro {
+    grid-column: 1 / 3;
+    padding-left: 2em;
+    padding-top: 2em;
+    font-size: .95em;
+}
+
+#profile-pic {
+    grid-column: 3 / 4;
+    height: auto;
+    width: 150px;
+    margin-top: 1.2em;
+    justify-self: center;
+    border: 3px solid #827081;
+}
+
+#aboutme a {
+    color: #827081;
+    text-decoration: none;
+    font-size: 1.4em;
+    grid-column: 1 / 4;
+    grid-row: 3 / 4;
+    justify-self: center;
+    z-index: 99;
+
+}
+
+#aboutme h3 {
+    border-bottom: 1px solid #827081;
+    text-decoration: none;
+    font-size: 1.4em;
+    display: block;
+    font-size: 1.17em;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+    unicode-bidi: isolate;
+}
+
+#instapic {
+    grid-row: 4;
+    /* Ensure both elements are on the same row */
+    grid-column: 1;
+    /* Place the image in the first column */
+    width: 250px;
+    margin-left: 1em;
+    margin-top: 1em;
+    margin-right: 1em;
+    margin-bottom: 1em;
+    border: 3px solid #827081;
+}
+
+#instagram {
+    width: 250px;
+    grid-row: 4;
+    /* Ensure both elements are on the same row */
+    grid-column: 3 / 4;
+    /* Span across columns 2 to 4 */
+    padding: 1em;
+    padding-left: 2em;
+    padding-top: 2em;
+}
+
+#webdev {
+    height: 100vh;
+    width: 400px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: .5fr 1fr;
+    margin: .5em;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+#webdev h2 {
+    grid-column: 1 / 3;
+    height: 70px;
+    text-align: center;
+    background: #AEA3B0;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    padding: .5em;
+}
+
+#webdev ul {
+    display: block;
+    grid-column: 1/3;
+    list-style-type: disc;
+    padding-left: 50px;
+    margin-left: 1em;
+    unicode-bidi: isolate;
+}
+
+#webdev a {
+    border-bottom: 1px solid #827081;
+    text-decoration: none;
+    color: #827081;
+    font-size: 1.17em;
+    unicode-bidi: isolate;
+}
+
+#webdev li {
+    padding: .7em;
+}
+
+/* mobile **************************/
+header {
+    background-color: #AEA3B0;
+    text-align: center;
+    justify-content: center;
+    padding-top: 20px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+header,
+main {
+    margin: 0 auto;
+}
+
+h1 {
+    font-size: 2rem;
+}
+
+nav {
+    display: flex;
+    flex-direction: column;
+    /* Change to column */
+    background-color: #827081;
+    margin-top: 20px;
+    /* Add margin top to create space between header title and nav */
+    max-width: 8000px;
+}
+
+nav ul {
+    list-style-type: none;
+}
+
+nav a {
+    display: block;
+    color: #fff;
+    text-align: center;
+    padding: 1rem;
+    text-decoration: none;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+.active {
+    color: #E3D0D8;
+}
+
+/* Larger Views ******************************/
+@media (min-width: 640px) {
+    nav ul {
+        display: flex;
+    }
+
+    nav ul li {
+        flex: 1 1 100%;
+    }
+}
+
+h1,
+h2 {
+    font-family: "Lugrasimo", cursive;
+    font-weight: 400;
+    font-size: 30px;
+}
