@@ -1,0 +1,101 @@
+/* General styles */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #413941;
+    color: #fff;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#menu::before {
+    content: '☰'
+}
+
+#menu.show::before {
+    content: 'X'
+}
+
+nav {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: inline;
+    margin-right: 20px;
+    color: #fff;
+    text-decoration: none;
+}
+
+nav.show {
+    display: inline;
+    /* Show the navigation links when the 'show' class is toggled */
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+main {
+    padding: 20px;
+}
+
+h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-gap: 20px;
+}
+
+figure {
+    margin: 0;
+}
+
+figure img {
+    width: 100%;
+    height: auto;
+}
+
+figcaption {
+    text-align: center;
+}
+
+footer {
+    width: 100%;
+    justify-self: center;
+    background: #413941;
+    color: #fff;
+    text-align: center;
+    margin-top: 1em;
+    padding-top: 2em;
+    padding-bottom: 2em;
+}
+
+/* Hamburger menu styles */
+.hamburger {
+    display: block;
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: #fff;
+    margin-right: 20px;
+}
+
+nav {
+    display: none;
+}
+
+nav .active {
+    display: block;
+}
