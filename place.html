@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WDD 131 - Country Page</title>
+    <meta name="description"
+        content="WDD 131 - Country Page. Cathelène Dechesne. Pictures, datas, weather, for small and large view.">
+    <meta name="author" content="Cathelène Dechesne">
+    <link rel="stylesheet" href="styles/place.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lumanosimo&family=Roboto:wght@300&display=swap"
+        rel="stylesheet">
+    <script src="scripts/place.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <h1>Taiwan</h1>
+    </header>
+    <main>
+        <div class="hero">
+            <picture>
+                <source srcset="images/hero-large.webp" media="(min-width: 768px)">
+                <img src="images/hero-small.webp" alt="Taipei 101, Taipei, Taiwan" width="500" height="250">
+            </picture>
+        </div>
+        <div class="datas">
+            <h2>Data</h2>
+            <div class="data-item">
+                <p class="name">Area:</p>
+                <p class="info">36,197 km2 (13,976 sq mi)</p>
+            </div>
+            <div class="data-item">
+                <p class="name">Population:</p>
+                <p class="info">23,946,437</p>
+            </div>
+            <div class="data-item">
+                <p class="name">Capital:</p>
+                <p class="info">Taipei</p>
+            </div>
+            <div class="data-item">
+                <p class="name">Languages:</p>
+                <p class="info">Mandarin, Hokkien, Hakka,<br> Formosan, Matsu, Wuqiu,<br> Taiwan Sign Language.
+                </p>
+            </div>
+            <div class="data-item">
+                <p class="name">Currency:</p>
+                <p class="info">New Taiwan dollar (NT$) (TWD)</p>
+            </div>
+            <div class="data-item">
+                <p class="name">Time Zone:</p>
+                <p class="info">UTC+8</p>
+            </div>
+            <div class="data-item">
+                <p class="name">Calling Code:</p>
+                <p class="info">+886</p>
+            </div>
+            <div class="data-item">
+                <p class="name">Internet TLD:</p>
+                <p class="info">.tw</p>
+            </div>
+        </div>
+        <div class="weather">
+            <h2>Weather</h2>
+            <img class="weather-icon" src="images/weather-icon-small.svg" alt="cloud and sun" width="60" height="60">
+            <div class="data-item">
+                <p class="name">Temperature:</p>
+                <p class="info">15°C</p>
+            </div>
+            <div class="data-item">
+                <p class="name">Conditions:</p>
+                <p class="info">Mostly cloudy</p>
+            </div>
+            <div class="data-item">
+                <p class="name">Wind:</p>
+                <p class="info">5 km/h</p>
+            </div>
+            <div class="data-item">
+                <p class="name">Wind Chill:</p>
+                <p class="info">N/A</p>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; <span id="2024"></span>🎨Cathelène Dechesne. Australia 🎨.</p>
+        <p id="lastModified"></p>
+    </footer>
+</body>
+
+</html>
