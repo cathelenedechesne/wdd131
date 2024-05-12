@@ -26,7 +26,7 @@ function displayWindChill() {
     const windChill = calculateWindChill(temperature, windSpeed);
 
     // Display wind chill on the page
-    const windChillElement = document.querySelector('.weather .data-item:nth-child(4) .info'); // Assuming wind chill is the fourth data item in the weather section
+    const windChillElement = document.getElementById('windChillValue');
     windChillElement.textContent = windChill;
 }
 

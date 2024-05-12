@@ -1,11 +1,18 @@
+:root {
+    --main-color: #000096;
+    /* Main color variable */
+    --font-family: 'Roboto', sans-serif;
+    /* Font family variable */
+}
+
 body {
-    font-family: 'Roboto', sans-serif;
+    font-family: var(--font-family);
     margin: 0;
     padding: 0;
 }
 
 header {
-    background-color: #000096;
+    background-color: var(--main-color);
     color: #fff;
     padding: 20px;
     display: flex;
@@ -19,10 +26,6 @@ header h1,
 main h2 {
     font-family: "Lumanosimo", sans-serif;
 }
-
-/*main p {
-    color: #FE0000;
-}*/
 
 .hero {
     width: 100%;
@@ -91,10 +94,20 @@ h2 {
     /* Adjust right position as needed */
 }
 
+
+.weather-h2::after {
+    content: "🌥️";
+    font-size: 2rem;
+    vertical-align: middle;
+    /* Align the weather icon vertically */
+    margin-left: 10px;
+    /* Add margin for spacing */
+}
+
 footer {
     width: 100%;
     justify-self: center;
-    background: #000096;
+    background: var(--main-color);
     color: #fff;
     text-align: center;
     padding-top: 2em;
@@ -145,20 +158,21 @@ footer {
         /* Allow image height to adjust accordingly */
     }
 
-    .weather::after {
-        content: url('images/weather-icon-small.svg');
+    .weather-h2::after {
+        display: none;
+    }
+
+    .weather-img {
         display: block;
-        margin-top: 10px;
+        margin: 0 auto;
+        padding-bottom: 20px;
+        /* Center the image horizontally */
     }
 }
 
-.weather-h2::after {
-    content: "🌦️";
-    font-size: 2rem;
-    padding-left: 10px;
-}
-
-/* Hide weather icon pseudo-element for larger screens */
-.weather::after {
-    content: none;
+/* Hide weather icon in large view */
+@media (min-width: 769px) {
+    .weather-img {
+        display: none;
+    }
 }
