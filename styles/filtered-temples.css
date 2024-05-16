@@ -1,0 +1,162 @@
+/* General styles */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #413941;
+    color: #fff;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#menu::before {
+    content: '☰'
+}
+
+#menu.show::before {
+    content: 'X'
+}
+
+#menu.show nav a {
+    color: #fff;
+}
+
+
+nav {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: inline;
+    margin-right: 20px;
+    color: #fff;
+    text-decoration: none;
+}
+
+nav.show {
+    display: inline;
+    /* Show the navigation links when the 'show' class is toggled */
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+main {
+    padding: 20px;
+    padding-bottom: 200px;
+    /* Adjust this value as needed */
+}
+
+
+h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-gap: 20px;
+}
+
+figure {
+    margin: 0;
+}
+
+figure img {
+    width: 100%;
+    height: auto;
+}
+
+figcaption {
+    text-align: center;
+}
+
+/* Hamburger menu styles */
+.hamburger {
+    display: block;
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: #fff;
+    margin-right: 20px;
+}
+
+nav {
+    display: none;
+}
+
+nav .active {
+    display: block;
+}
+
+
+/* Styles for the navigation links inside the hamburger menu */
+nav.show a {
+    color: #fff;
+    /* Ensure the links are white when the menu is shown */
+    text-decoration: none;
+    margin: 10px;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+/* Added these styles the cards */
+
+.card {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease;
+    background-color: #ebebeb;
+    max-width: 400px;
+}
+
+.card:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.card img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.card-details {
+    padding: 20px;
+}
+
+.card-details h3 {
+    margin-top: 0;
+}
+
+.card-details p {
+    margin: 5px 0;
+}
+
+footer {
+    width: 100%;
+    background: #413941;
+    color: #fff;
+    text-align: center;
+    padding-top: 1em;
+    padding-bottom: 1em;
+    position: fixed;
+    /* Fix the position of the footer */
+    bottom: 0;
+    /* Stick the footer to the bottom of the viewport */
+    left: 0;
+    /* Ensure the footer spans the entire width */
+    right: 0;
+    /* Ensure the footer spans the entire width */
+}

@@ -1,0 +1,31 @@
+@media (min-width: 1200px) {
+
+    #menu {
+        display: none;
+        /* Hide the hamburger menu icon in larger view */
+    }    
+
+    main {
+        max-width: 960px;
+        margin: 0 auto;
+    }
+
+    nav {
+        flex-grow: 1;
+        display: flex;
+        justify-content: flex-end;
+        /* Align the navigation to the right */
+    }
+
+    nav a {
+        display: flex;
+        /* Display the list items horizontally */
+        margin-right: 100px;
+        /* Add margin between list items */
+        color: #fff;
+        text-decoration: none;
+        font-size: 25px;
+        /* Adjust the font size to your preference */
+    }
+
+}
