@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Product Review Form">
+    <meta name="author" content="Cathelène Dechesne">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Review Form</title>
+    <link rel="stylesheet" href="styles/form.css">
+    <script src="scripts/form.js" defer></script>
+</head>
+
+<body>
+    <!-- HEADER HERE -->
+    <header>
+        <h1>Product Review</h1>
+    </header>
+    <main>
+        <form method="get" action="review.html" class="rev1">
+            <fieldset>
+                <div>Product Named</div>
+                <select name="products" id="productSelect" required>
+                    <option value="">Choose a Product... &#9662;</option>
+                </select>
+
+                <div>Overall Rating</div>
+                <div class="radio-group">
+                    <label><input type="radio" id="oneStar" name="rating" value="oneStar" required>&star;</label>
+                    <label><input type="radio" id="twoStars" name="rating" value="twoStars" required>&star;
+                        &star;</label>
+                    <label><input type="radio" id="threeStars" name="rating" value="threeStars" required>&star; &star;
+                        &star;</label>
+                    <label><input type="radio" id="fourStars" name="rating" value="fourStars" required>&star; &star;
+                        &star;
+                        &star;</label>
+                    <label><input type="radio" id="fiveStars" name="rating" value="fiveStars" required>&star; &star;
+                        &star; &star; &star;</label>
+                </div>
+
+                <div>Date of Installation</div>
+                <input id="instalDate" type="date" name="installation" required>
+
+                <div>Which features did you find useful in the product?<br><em>(Check all that apply)</em></div>
+                <label><input type="checkbox" id="durability" name="productsFeatures" value="yes">Durability</label>
+                <label><input type="checkbox" id="ease" name="productsFeatures" value="yes">Ease of Use</label>
+                <label><input type="checkbox" id="performance" name="productsFeatures" value="yes">Performance</label>
+                <label><input type="checkbox" id="design" name="productsFeatures" value="yes">Design</label>
+
+                <div>Written Review<em>(Optional)</em></div>
+                <textarea name="writtenReview" id="wreview"></textarea>
+
+                <div>Your Name <em>(Optional)</em></div>
+                <input type="text" id="name" name="userName">
+
+                <input type="submit" value="Post Review">
+
+    </main>
+    <footer>
+        <p>&copy; <span id="2024"></span>🎨Cathelène Dechesne. Australia 🎨.</p>
+        <p id="lastModified"></p>
+    </footer>
+
+</body>
+
+</html>

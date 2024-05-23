@@ -1,0 +1,141 @@
+body {
+    font-size: 16px;
+    font-family: Verdana, sans-serif;
+}
+
+/*----------- HEADER --------------*/
+
+header {
+    padding: 2%;
+    color: white;
+    background-color: #563866;
+}
+
+header h1 {
+    margin: 0;
+}
+
+header h2 {
+    margin: 0;
+    font-weight: normal;
+}
+
+/*----------- MAIN --------------*/
+main {
+    padding: 0 2%;
+    min-height: 20rem;
+}
+
+.rev1 fieldset {
+    margin: 2rem 0;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    padding: .5rem 2%;
+}
+
+.rev1 label {
+    display: block;
+    padding-top: 1rem;
+    color: #9c2c13;
+    font-size: .9rem;
+}
+
+.rev1 div {
+    padding-top: 1rem;
+    color: #445ba9;
+    font-size: .9rem;
+}
+
+.rev1 input[type=text],
+.rev1 input[type=tel],
+.rev1 input[type=email],
+.rev1 input[type=url],
+.rev1 input[type=date],
+.rev1 input[type=number],
+.rev1 select,
+.rev1 textarea {
+    background-color: #eee;
+    display: block;
+    border: solid #999;
+    border-radius: 6px;
+    padding: .75rem;
+    width: 100%;
+    max-width: 400px;
+    appearance: none;
+}
+
+.rev1 select {
+    max-width: 430px;
+}
+
+.rev1 input[type="radio"],
+.rev1 input[type="checkbox"] {
+    margin-right: 6px;
+}
+
+.rev1 .radio-group {
+    display: flex;
+    gap: 20px;
+    padding-bottom: 10px;
+    /* Optional: adds space between the radio buttons */
+}
+
+.rev1 input[type="submit"] {
+    border: none;
+    background-image: linear-gradient(#563866, #1f1425);
+    color: #fff;
+    border-radius: 6px;
+    padding: .8rem;
+    width: 96%;
+    max-width: 430px;
+    margin: 2rem 0 2%;
+    box-shadow: 1px 1px 4px #999;
+}
+
+.rev1 input:required {
+    border-bottom: solid 8px red;
+}
+
+.rev1 input:required:valid {
+    border-bottom: solid 8px green;
+}
+
+/*----------- Review.html Styling --------------*/
+
+/* Centering and styling the main content of review.html */
+.review-main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 80vh;
+    /* Adjusts the minimum height to center the content vertically */
+    background-color: #f5f5f5;
+    /* Light background color */
+}
+
+.card {
+    background-color: #fff;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    width: 100%;
+    text-align: center;
+}
+
+.card p {
+    margin: 1rem 0;
+    font-size: 1.1rem;
+    color: #333;
+}
+
+/*----------- FOOTER --------------*/
+
+footer {
+    background: #563866;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+    bottom: 0;
+    width: 100%;
+}
