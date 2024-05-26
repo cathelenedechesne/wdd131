@@ -90,3 +90,5 @@ document.addEventListener('DOMContentLoaded', function () {
         displayReviewCount();
     }
 });
+
+// Hope this works!!
