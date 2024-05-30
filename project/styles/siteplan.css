@@ -63,13 +63,13 @@ hr {
 header {
   padding: 1em;
   text-align: center;
-  color: var(--headline-color-on-color);
-  background-color: var(--paragraph-background-color);
+  color: var(--accent1-color);
+  background-color: var(--primary-color);
 }
 
 header>h1,
 header>h2 {
-  color: var(--headline-color-on-color);
+  color: var(--accent1-color);
 }
 
 p {
@@ -201,8 +201,8 @@ footer {
   margin-top: 50px;
   justify-self: center;
   text-align: center;
-  background-color: #3B1721;
-  color: white !important;
+  background-color: #f8f4ef;
+  color: 260403 !important;
 }
 
 footer p,
@@ -215,5 +215,5 @@ footer h3,
 footer h4,
 footer h5,
 footer h6 {
-  color: white !important;
+  color: 260403 !important;
 }
