@@ -33,6 +33,7 @@ header {
     background-color: #f8f4ef;
     display: grid;
     grid-template-columns: 300px auto;
+    align-items: center;
 }
 
 #logo_link {
@@ -44,6 +45,7 @@ header {
 nav {
     display: flex;
     justify-content: space-around;
+    flex-wrap: wrap;
 }
 
 .nav-item {
@@ -148,22 +150,26 @@ figure {
     grid-row: 2/3;
 }
 
+#fanart-index,
+#cherry-index,
+#face-index {
+    width: 100%;
+    justify-self: center;
+}
+
 #fanart-index {
     grid-column: 2/4;
     width: 100%;
-    justify-self: center;
 }
 
 #cherry-index {
     grid-column: 5/7;
     width: 100%;
-    justify-self: center;
 }
 
 #face-index {
     grid-column: 8/10;
     width: 100%;
-    justify-self: center;
 }
 
 
@@ -212,43 +218,8 @@ figure {
     margin-bottom: 50px;
 }
 
-.button-box-gallery-button {
-    grid-row: 3;
-    grid-column: 5/7;
-    justify-self: center;
-    border-radius: 4px;
-    background-color: #3B1721;
-    border: none;
-    color: #FFFFFF;
-    text-align: center;
-    font-size: 28px;
-    padding: 20px;
-    width: 200px;
-    transition: all 0.5s;
-    cursor: pointer;
-    margin: 5px;
-    margin-top: 50px;
-}
-
-.button-box-about-aboutme {
-    grid-row: 3;
-    grid-column: 4/8;
-    border-radius: 4px;
-    background-color: #3B1721;
-    border: none;
-    color: #FFFFFF;
-    text-align: center;
-    font-size: 28px;
-    padding: 20px;
-    width: 200px;
-    transition: all 0.5s;
-    cursor: pointer;
-    margin: 5px;
-    margin-top: 50px;
-    margin-bottom: 50px;
-    justify-self: center;
-}
-
+.button-box-gallery-button,
+.button-box-about-aboutme,
 .button {
     border-radius: 4px;
     background-color: #3B1721;
@@ -261,6 +232,18 @@ figure {
     transition: all 0.5s;
     cursor: pointer;
     margin: 5px;
+}
+
+.button-box-gallery-button {
+    grid-row: 3;
+    grid-column: 5/7;
+    justify-self: center;
+}
+
+.button-box-about-aboutme {
+    grid-row: 3;
+    grid-column: 4/8;
+    justify-self: center;
 }
 
 .button span {
@@ -303,79 +286,73 @@ figure {
 #og-art {
     grid-column: 2/10;
     text-align: center;
-    color: #735448;
+    color: #3B1721;
     margin-bottom: 100px;
     width: 100%;
+}
+
+#cherry-gallery,
+#face-gallery,
+#color-splash,
+#eye,
+#hands,
+#kangaroo,
+#bunny-cat,
+#elf,
+#koi-fish,
+#fairy {
+    width: 100%;
+    justify-self: center;
 }
 
 #cherry-gallery {
     grid-column: 2/4;
     grid-row: 2/3;
-    width: 100%;
-    justify-self: center;
 }
 
 #face-gallery {
     grid-column: 5/7;
     grid-row: 2/3;
-    width: 100%;
-    justify-self: center;
 }
 
 #color-splash {
     grid-column: 8/10;
     grid-row: 2/3;
-    width: 100%;
-    justify-self: center;
 }
 
 #eye {
     grid-column: 2/4;
     grid-row: 3/4;
-    width: 100%;
-    justify-self: center;
 }
 
 #hands {
     grid-column: 5/7;
     grid-row: 3/4;
-    width: 100%;
-    justify-self: center;
 }
 
 #kangaroo {
     grid-column: 8/10;
     grid-row: 3/4;
-    width: 100%;
-    justify-self: center;
 }
 
 #bunny-cat {
     grid-column: 2/4;
     grid-row: 4/5;
-    width: 100%;
-    justify-self: center;
 }
 
 #elf {
     grid-column: 5/7;
     grid-row: 4/5;
-    width: 100%;
-    justify-self: center;
 }
 
 #koi-fish {
     grid-column: 8/10;
     grid-row: 4/5;
-    width: 100%;
-    justify-self: center;
 }
 
 #fairy {
     grid-column: 5/7;
     grid-row: 5/6;
-    width: 100%;
-    justify-self: center;
 }
 
 .dtiys-fanart {
@@ -388,7 +365,7 @@ figure {
 #df-art {
     grid-column: 2/10;
     text-align: center;
-    color: #735448;
+    color: #3B1721;
     margin-top: 100px;
     margin-bottom: 100px;
     width: 100%;
@@ -416,33 +393,36 @@ figure {
 #ab-title {
     grid-column: 2/10;
     text-align: center;
-    color: #735448;
+    color: #3B1721;
     margin-bottom: 100px;
     width: 100%;
 }
 
-.ab-pic1 {
-    grid-column: 5/7;
+.ab-pic1,
+.ab-pic2 {
     margin-bottom: 100px;
     width: 100%;
     justify-self: center;
 }
 
+.ab-pic1 {
+    grid-column: 5/7;
+}
+
+.ab-pic2 {
+    grid-column: 3/9;
+}
+
+
 #ab-text {
     grid-column: 3/9;
     text-align: left;
-    color: #735448;
+    color: #3B1721;
     font-family: Vollkorn, Arial, sans-serif;
     margin-bottom: 100px;
     width: 100%;
 }
 
-.ab-pic2 {
-    grid-column: 3/9;
-    margin-bottom: 100px;
-    width: 100%;
-    justify-self: center;
-}
 
 /*************************************************************
 *               Modal Begin
@@ -517,6 +497,11 @@ figure {
     opacity: 1;
     pointer-events: auto;
 }
+
+/*************************************************************
+*               Media Queries
+*
+*************************************************************/
 
 @media screen and (max-width: 900px) {
 
