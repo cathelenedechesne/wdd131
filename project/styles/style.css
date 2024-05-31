@@ -514,6 +514,7 @@ figure {
     nav,
     footer {
         flex-direction: column;
+        align-items: center;
     }
 
     nav a {
@@ -527,6 +528,8 @@ figure {
 
     #hero-msg {
         margin-top: 0;
+        margin-left: 0;
+        margin-right: 0;
     }
 
     #hero-msg h4 {
@@ -536,4 +539,36 @@ figure {
     footer {
         margin-top: 25px;
     }
+
+    header {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .nav-item {
+        padding: 15px;
+        font-size: 20px;
+    }
+
+
+    .gallery-title,
+    .about-title,
+    .about-me-synopsis,
+    .synopsis,
+    .msg,
+    .msg-p,
+    .button-box-gallery-button,
+    .button-box-about-aboutme {
+        grid-column: 1 / -1;
+        margin: 20px;
+    }
+
+    figcaption {
+        font-size: small;
+    }
+
+    .about-me-synopsis {
+        width: 90%;
+    }
+
 }
