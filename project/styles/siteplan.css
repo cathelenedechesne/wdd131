@@ -201,8 +201,8 @@ footer {
   margin-top: 50px;
   justify-self: center;
   text-align: center;
-  background-color: #f8f4ef;
-  color: 260403 !important;
+  background-color: #3B1721;
+  color: white !important;
 }
 
 footer p,
@@ -215,5 +215,5 @@ footer h3,
 footer h4,
 footer h5,
 footer h6 {
-  color: 260403 !important;
+  color: white !important;
 }

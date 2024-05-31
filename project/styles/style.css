@@ -47,7 +47,7 @@ nav {
 }
 
 .nav-item {
-    color: #735448;
+    color: #3B1721;
     font-family: Vollkorn, Arial, sans-serif;
     font-size: 30px;
     text-align: center;
@@ -56,7 +56,7 @@ nav {
 }
 
 .nav-item:hover {
-    background-color: #735448;
+    background-color: #3B1721;
     color: #f8f4ef;
 }
 
@@ -68,7 +68,7 @@ nav {
 *************************************************************/
 
 footer {
-    background-color: #735448;
+    background-color: #3B1721;
     color: #f8f4ef;
     padding: 25px 50px;
     display: flex;
@@ -84,7 +84,7 @@ footer {
 
 .footer-link:hover {
     background-color: #f8f4ef;
-    color: #735448;
+    color: #3B1721;
     text-decoration: underline;
 }
 
@@ -171,7 +171,7 @@ figure {
     display: grid;
     grid-template-columns: repeat(10, 1fr);
     margin-top: 100px;
-    background: #D9CCC5;
+    background: #f8f4ef;
 }
 
 .about-title {
@@ -194,7 +194,8 @@ figure {
 .commission {
     display: grid;
     grid-template-columns: repeat(10, 1fr);
-    background: #A6948A;
+    background: #260403;
+    color: #FFFFFF;
 }
 
 .msg {
@@ -216,7 +217,7 @@ figure {
     grid-column: 5/7;
     justify-self: center;
     border-radius: 4px;
-    background-color: #735448;
+    background-color: #3B1721;
     border: none;
     color: #FFFFFF;
     text-align: center;
@@ -233,7 +234,7 @@ figure {
     grid-row: 3;
     grid-column: 4/8;
     border-radius: 4px;
-    background-color: #735448;
+    background-color: #3B1721;
     border: none;
     color: #FFFFFF;
     text-align: center;
@@ -250,7 +251,7 @@ figure {
 
 .button {
     border-radius: 4px;
-    background-color: #735448;
+    background-color: #3B1721;
     border: none;
     color: #FFFFFF;
     text-align: center;

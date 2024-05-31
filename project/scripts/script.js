@@ -12,20 +12,3 @@ document.getElementById("lastModified").textContent = "Last modified: " + lastMo
 
 
 /* ----- Hamburger button -----*/
-
-const hamButton = document.querySelector('#menu');
-const navigation = document.querySelector('.navigation')
-
-hamButton.addEventListener('click', () => {
-    navigation.classList.toggle('show')
-    hamButton.classList.toggle('show')
-}
-)
-
-// Event listener for window resize event
-window.addEventListener('resize', () => {
-    const screenWidth = window.innerWidth;
-    if (screenWidth >= 1200) { // Adjust threshold as needed
-        closeHamMenu();
-    }
-});
