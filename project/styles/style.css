@@ -97,6 +97,11 @@ footer {
 
 .social-img {
     padding-top: 15px;
+    
+}
+
+#ref{
+    font-size: small;
 }
 
 /*************************************************************
@@ -202,6 +207,7 @@ figure {
     display: grid;
     grid-template-columns: repeat(10, 1fr);
     margin-top: 100px;
+    padding-bottom: 100px;
     background: #f8f4ef;
 }
 
@@ -259,16 +265,20 @@ figure {
     margin: 5px;
 }
 
-.button-box-gallery-button {
+.button-box-gallery-button,
+.button-box-about-aboutme {
     grid-row: 3;
-    grid-column: 5/7;
     justify-self: center;
+    margin-top: 100px;
+}
+
+
+.button-box-gallery-button {
+    grid-column: 5/7;
 }
 
 .button-box-about-aboutme {
-    grid-row: 3;
     grid-column: 4/8;
-    justify-self: center;
 }
 
 .button span {
