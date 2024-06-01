@@ -24,6 +24,10 @@ img {
     margin: 0 auto;
 }
 
+figcaption {
+    text-align: center;
+}
+
 /***************************************************************************
 *
 *               Header Content
@@ -116,6 +120,19 @@ footer {
     width: 100%;
 }
 
+#hero::after {
+    content: "";
+    position: absolute;
+    bottom: -325px;
+    left: 0;
+    width: 100%;
+    height: 300px;
+    /* Adjust height to control the gradient's reach */
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 1) 100%);
+    pointer-events: none;
+    /* Ensures the gradient doesn't interfere with other elements */
+}
+
 #hero-msg {
     grid-column: 1/4;
     grid-row: 1/2;
@@ -155,6 +172,14 @@ figure {
 #face-index {
     width: 100%;
     justify-self: center;
+    border: 1px solid #3B1721;
+    /* Solid border style */
+    border-radius: 10px;
+    /* Optional: rounded corners */
+    padding: 5px;
+    /* Optional: space between the border and image */
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+    /* Shadow effect */
 }
 
 #fanart-index {
@@ -303,6 +328,14 @@ figure {
 #fairy {
     width: 100%;
     justify-self: center;
+    border: 1px solid #3B1721;
+    /* Solid border style */
+    border-radius: 10px;
+    /* Optional: rounded corners */
+    padding: 5px;
+    /* Optional: space between the border and image */
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+    /* Shadow effect */
 }
 
 #cherry-gallery {
@@ -376,6 +409,14 @@ figure {
     grid-column: 5/7;
     width: 100%;
     justify-self: center;
+    border: 1px solid #3B1721;
+    /* Solid border style */
+    border-radius: 10px;
+    /* Optional: rounded corners */
+    padding: 5px;
+    /* Optional: space between the border and image */
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+    /* Shadow effect */
 }
 
 /*************************************************************
@@ -407,6 +448,16 @@ figure {
 
 .ab-pic1 {
     grid-column: 5/7;
+    width: 100%;
+    justify-self: center;
+    border: 1px solid #3B1721;
+    /* Solid border style */
+    border-radius: 10px;
+    /* Optional: rounded corners */
+    padding: 5px;
+    /* Optional: space between the border and image */
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+    /* Shadow effect */
 }
 
 .ab-pic2 {
@@ -505,10 +556,14 @@ figure {
 
 @media screen and (max-width: 900px) {
 
-    #hero,
-    #rivers_hero {
-        display: block;
-        height: auto;
+    header {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .nav-item {
+        padding: 15px;
+        font-size: 20px;
     }
 
     nav,
@@ -522,6 +577,20 @@ figure {
         padding: 15px;
     }
 
+    footer {
+        margin-top: 0px;
+        font-size: medium;
+    }
+
+    /*** Home Page ***/
+
+
+    #hero,
+    #rivers_hero {
+        display: block;
+        height: auto;
+    }
+
     #hero {
         margin-top: 0;
     }
@@ -532,22 +601,25 @@ figure {
         margin-right: 0;
     }
 
+    #hero-msg h1,
     #hero-msg h4 {
-        display: none;
-    }
-
-    footer {
-        margin-top: 25px;
-    }
-
-    header {
-        grid-template-columns: 1fr;
         text-align: center;
+        color: #f8f4ef;
+        background: #260403;
+        padding-top: 5%;
+        padding-bottom: 5%;
+        font-size: medium;
+
     }
 
-    .nav-item {
-        padding: 15px;
-        font-size: 20px;
+    #hero-msg h4 {
+        margin-top: -9%;
+
+    }
+
+    #hero::after,
+    #hero-img {
+        display: none;
     }
 
 
@@ -559,16 +631,135 @@ figure {
     .msg-p,
     .button-box-gallery-button,
     .button-box-about-aboutme {
-        grid-column: 1 / -1;
-        margin: 20px;
+        grid-column: 1 /-1;
+        margin: 0px;
     }
 
-    figcaption {
+    .originals figcaption,
+    .dtiys-fanart figcaption {
         font-size: small;
+        text-align: center;
+    }
+
+    #fanart-index,
+    #cherry-index,
+    #face-index {
+        grid-column: 1/-1;
+        margin: 50px;
+        width: 90%;
+        /*border: none;
+        box-shadow: none;*/
+    }
+
+    #fanart-index {
+        grid-row: 2;
+    }
+
+    #cherry-index {
+        grid-row: 3;
+    }
+
+    #face-index {
+        grid-row: 4;
+    }
+
+    .button-box-gallery-button {
+        grid-row: 5;
+    }
+
+    .aboutme {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        /* Ensure elements are spaced out */
+        height: auto;
+        padding-bottom: 50px;
+    }
+
+    .about-title,
+    .about-me-synopsis,
+    .synopsis {
+        margin: 10px 0;
+        padding-top: 40px;
+        /* Add margin for spacing */
     }
 
     .about-me-synopsis {
+        width: 80%;
+        padding-left: 90px;
+    }
+
+    .synopsis {
+        padding-left: 20px;
+        padding-bottom: 50px;
+    }
+
+
+    .button-box-about-aboutme {
+        align-self: center;
+        /* Center the button horizontally */
+        margin-top: auto;
+        /* Push the button to the bottom */
+        margin-bottom: 20px;
+        /* Add some margin at the bottom */
+    }
+
+    .commission {
+        margin-top: 25px;
+        padding-bottom: 20px;
+        padding-top: 20px;
+        font-size: medium;
+    }
+
+    .commission h2 {
+        padding-bottom: 20px;
+    }
+
+    /*** Gallery Page ***/
+
+    #cherry-gallery,
+    #face-gallery,
+    #color-splash,
+    #eye,
+    #hands,
+    #kangaroo,
+    #bunny-cat,
+    #elf,
+    #koi-fish,
+    #fairy,
+    #fanart-gallery {
+        grid-column: 1 / -1;
+        width: 90%;
+        /* Increase width for better visibility on small screens */
+        margin: 20px auto;
+        /* Adjust margin for better spacing */
+    }
+
+    #cherry-gallery,
+    #face-gallery,
+    #color-splash,
+    #eye,
+    #hands,
+    #kangaroo,
+    #bunny-cat,
+    #elf,
+    #koi-fish,
+    #fairy,
+    #fanart-gallery {
+        grid-row: auto;
+        /* Allow natural flow in a single column */
+    }
+
+    /*** About Me Page ***/
+
+    .ab-pic1,
+    .ab-pic2 {
+        grid-column: 1 / -1;
         width: 90%;
     }
 
+    .about-me-page #ab-text {
+        grid-column: 2 / 10;
+        /* Span more columns to take up more space */
+    }
 }
