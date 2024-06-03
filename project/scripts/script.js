@@ -5,6 +5,9 @@ document.addEventListener("DOMContentLoaded", function () {
     const lastModifiedDate = document.lastModified;
     document.getElementById("lastModified").textContent = "Last modified: " + lastModifiedDate;
 
+    /**** Modal Section for Big View ****/
+
+
     // Define modal data as an array of objects
     const modals = [
         {
@@ -65,57 +68,47 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     ];
 
-    // Function to handle opening a modal
-    function openModal(modal) {
-        if (modal == null) return;
-        modal.classList.add("active");
-        overlay.classList.add("active");
-        // Store modal state in localStorage
-        localStorage.setItem(modal.id, "open");
-    }
+// Function to handle modal state
+function toggleModal(modal, action) {
+    if (modal == null) return;
+    modal.classList[action]("active");
+    // Store modal state in localStorage
+    localStorage.setItem(modal.id, action === "add" ? "open" : "closed");
+}
 
-    // Function to handle closing a modal
-    function closeModal(modal) {
-        if (modal == null) return;
-        modal.classList.remove("active");
-        overlay.classList.remove("active");
-        // Update modal state in localStorage
-        localStorage.setItem(modal.id, "closed");
-    }
-
-    // Restore modal state from localStorage and attach event listeners
-    modals.forEach(modal => {
-        const state = localStorage.getItem(modal.id);
-        const modalElement = document.getElementById(modal.id);
-        modal.triggerButton.forEach(buttonId => { // Loop through triggerButton IDs
-            const triggerButton = document.getElementById(buttonId);
-            if (triggerButton) {
-                triggerButton.addEventListener("click", () => {
-                    openModal(modalElement);
-                });
-            }
-        });
-        if (state === "open") {
-            openModal(modalElement);
-        } else {
-            closeModal(modalElement);
+// Attach event listeners for modal trigger buttons
+modals.forEach(modal => {
+    const modalElement = document.getElementById(modal.id);
+    modal.triggerButton.forEach(buttonId => {
+        const triggerButton = document.getElementById(buttonId);
+        if (triggerButton) {
+            triggerButton.addEventListener("click", () => {
+                toggleModal(modalElement, "add");
+            });
         }
     });
+    if (localStorage.getItem(modal.id) === "open") {
+        toggleModal(modalElement, "add");
+    } else {
+        toggleModal(modalElement, "remove");
+    }
+});
 
-    // Add event listeners for modal close buttons
-    const modalCloseButtons = document.querySelectorAll(".modal-close");
-    modalCloseButtons.forEach(button => {
-        button.addEventListener("click", () => {
-            const modal = button.closest(".modal-window");
-            closeModal(modal);
-        });
-    });
-
-    // Add event listener for overlay click to close modals
-    overlay.addEventListener("click", () => {
-        const modals = document.querySelectorAll(".modal-window.active");
-        modals.forEach(modal => {
-            closeModal(modal);
-        });
+// Attach event listener for modal close buttons
+document.querySelectorAll(".modal-close").forEach(button => {
+    button.addEventListener("click", () => {
+        const modal = button.closest(".modal-window");
+        toggleModal(modal, "remove");
     });
 });
+
+// Attach event listener for accordion buttons
+document.querySelectorAll('.accordion-button').forEach(btn => {
+    btn.addEventListener('click', function () {
+        this.classList.toggle('active');
+        const content = this.nextElementSibling;
+        content.style.display = content.style.display === 'block' ? 'none' : 'block';
+    });
+});
+});
+
